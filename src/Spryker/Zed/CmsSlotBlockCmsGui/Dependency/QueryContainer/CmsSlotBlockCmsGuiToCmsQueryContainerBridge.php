@@ -24,11 +24,6 @@ class CmsSlotBlockCmsGuiToCmsQueryContainerBridge implements CmsSlotBlockCmsGuiT
         $this->cmsQueryContainer = $cmsQueryContainer;
     }
 
-    /**
-     * @param int $idLocale
-     *
-     * @return \Propel\Runtime\ActiveQuery\ModelCriteria
-     */
     public function queryPagesWithTemplatesForSelectedLocale(int $idLocale): ModelCriteria
     {
         return $this->cmsQueryContainer->queryPagesWithTemplatesForSelectedLocale($idLocale);

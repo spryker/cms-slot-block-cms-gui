@@ -47,11 +47,6 @@ class CmsPageConditionDataProvider implements CmsPageConditionDataProviderInterf
      */
     protected $localeFacade;
 
-    /**
-     * @param \Spryker\Zed\CmsSlotBlockCmsGui\Dependency\QueryContainer\CmsSlotBlockCmsGuiToCmsQueryContainerInterface $cmsQueryContainer
-     * @param \Spryker\Zed\CmsSlotBlockCmsGui\Dependency\Facade\CmsSlotBlockCmsGuiToTranslatorFacadeInterface $translatorFacade
-     * @param \Spryker\Zed\CmsSlotBlockCmsGui\Dependency\Facade\CmsSlotBlockCmsGuiToLocaleFacadeInterface $localeFacade
-     */
     public function __construct(
         CmsSlotBlockCmsGuiToCmsQueryContainerInterface $cmsQueryContainer,
         CmsSlotBlockCmsGuiToTranslatorFacadeInterface $translatorFacade,
@@ -73,9 +68,6 @@ class CmsPageConditionDataProvider implements CmsPageConditionDataProviderInterf
         ];
     }
 
-    /**
-     * @return array
-     */
     public function getAllOptions(): array
     {
         return [

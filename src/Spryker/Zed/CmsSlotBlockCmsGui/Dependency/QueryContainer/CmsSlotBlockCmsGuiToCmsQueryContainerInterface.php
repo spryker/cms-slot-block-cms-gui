@@ -11,10 +11,5 @@ use Propel\Runtime\ActiveQuery\ModelCriteria;
 
 interface CmsSlotBlockCmsGuiToCmsQueryContainerInterface
 {
-    /**
-     * @param int $idLocale
-     *
-     * @return \Propel\Runtime\ActiveQuery\ModelCriteria
-     */
     public function queryPagesWithTemplatesForSelectedLocale(int $idLocale): ModelCriteria;
 }

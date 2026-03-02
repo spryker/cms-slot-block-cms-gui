@@ -20,17 +20,11 @@ use Spryker\Zed\Kernel\Communication\AbstractCommunicationFactory;
 
 class CmsSlotBlockCmsGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\CmsSlotBlockCmsGui\Communication\Form\CmsPageSlotBlockConditionForm
-     */
     public function createCmsPageConditionForm(): CmsPageSlotBlockConditionForm
     {
         return new CmsPageSlotBlockConditionForm();
     }
 
-    /**
-     * @return \Spryker\Zed\CmsSlotBlockCmsGui\Communication\Form\DataProvider\CmsPageConditionDataProviderInterface
-     */
     public function createCmsPageConditionFormDataProvider(): CmsPageConditionDataProviderInterface
     {
         return new CmsPageConditionDataProvider(
@@ -40,41 +34,26 @@ class CmsSlotBlockCmsGuiCommunicationFactory extends AbstractCommunicationFactor
         );
     }
 
-    /**
-     * @return \Spryker\Zed\CmsSlotBlockCmsGui\Communication\Form\Constraint\CmsPageConditionConstraint
-     */
     public function createCmsPageConditionsConstraint(): CmsPageConditionConstraint
     {
         return new CmsPageConditionConstraint();
     }
 
-    /**
-     * @return \Spryker\Zed\CmsSlotBlockCmsGui\Dependency\QueryContainer\CmsSlotBlockCmsGuiToCmsQueryContainerInterface
-     */
     public function getCmsQueryContainer(): CmsSlotBlockCmsGuiToCmsQueryContainerInterface
     {
         return $this->getProvidedDependency(CmsSlotBlockCmsGuiDependencyProvider::QUERY_CONTAINER_CMS);
     }
 
-    /**
-     * @return \Spryker\Zed\CmsSlotBlockCmsGui\Dependency\Facade\CmsSlotBlockCmsGuiToTranslatorFacadeInterface
-     */
     public function getTranslatorFacade(): CmsSlotBlockCmsGuiToTranslatorFacadeInterface
     {
         return $this->getProvidedDependency(CmsSlotBlockCmsGuiDependencyProvider::FACADE_TRANSLATOR);
     }
 
-    /**
-     * @return \Spryker\Zed\CmsSlotBlockCmsGui\Dependency\Facade\CmsSlotBlockCmsGuiToLocaleFacadeInterface
-     */
     public function getLocaleFacade(): CmsSlotBlockCmsGuiToLocaleFacadeInterface
     {
         return $this->getProvidedDependency(CmsSlotBlockCmsGuiDependencyProvider::FACADE_LOCALE);
     }
 
-    /**
-     * @return \Spryker\Zed\CmsSlotBlockCmsGui\Dependency\Service\CmsSlotBlockCmsGuiToUtilEncodingInterface
-     */
     public function getUtilEncoding(): CmsSlotBlockCmsGuiToUtilEncodingInterface
     {
         return $this->getProvidedDependency(CmsSlotBlockCmsGuiDependencyProvider::SERVICE_UTIL_ENCODING);
